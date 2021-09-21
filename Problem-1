@@ -1,54 +1,29 @@
+package company;
+
 import java.util.Scanner;
 
-public class JavaExample {
+public class Pgm1 {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner jj = new Scanner(System.in);
+		System.out.println("enter a operator");
+		char operator = jj.next().charAt(0);
+		System.out.println("enter a digit");
+		double num1 = jj.nextDouble();
+		double num2 = jj.nextDouble();
+		switch (operator) {
+		case '+':
+			System.out.println("addition of number ="+(num1+num2) );break;
+		case '-':
+			System.out.println("substraction of number ="+(num1-num2) );break;
+		case '*':
+			System.out.println("multiplication of number ="+(num1*num2) );break;
+		case '/':
+			System.out.println("division of number ="+(num1/num2) );break;
+		default:
+			System.out.println("entere oprrator is invalid");
+		}
 
-    	double num1, num2;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number:");
-
-        /* We are using data type double so that user
-         * can enter integer as well as floating point
-         * value
-         */
-        num1 = scanner.nextDouble();
-        System.out.print("Enter second number:");
-        num2 = scanner.nextDouble();
-
-        System.out.print("Enter an operator (+, -, *, /): ");
-        char operator = scanner.next().charAt(0);
-
-        scanner.close();
-        double output;
-
-        switch(operator)
-        {
-            case '+':
-            	output = num1 + num2;
-                break;
-
-            case '-':
-            	output = num1 - num2;
-                break;
-
-            case '*':
-            	output = num1 * num2;
-                break;
-
-            case '/':
-            	output = num1 / num2;
-                break;
-
-            /* If user enters any other operator or char apart from
-             * +, -, * and /, then display an error message to user
-             * 
-             */
-            default:
-                System.out.printf("You have entered wrong operator");
-                return;
-        }
-
-        System.out.println(num1+" "+operator+" "+num2+": "+output);
-    }
+	}
 }
